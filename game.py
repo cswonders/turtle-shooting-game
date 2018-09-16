@@ -1,6 +1,6 @@
 import turtle
 import time
-import Player
+import player
 
 class Game():
     def __init__(self):
@@ -19,7 +19,7 @@ class Game():
             s.write("The Amazing \n Turtle Game", align="center", font = ("Brush Script MT", 150, "bold"))
         s.clear()
         s.goto(0, 0)
-        t1 = Player.Player(self.screen)
+        t1 = player.Player(self.screen)
         time.sleep(0.25)
         for i in range(0, 101, 4):
             s.pencolor((i/100, i/100, i/100))
