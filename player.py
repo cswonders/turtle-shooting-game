@@ -4,7 +4,6 @@ class Player(Turtle):
     def __init__(self, wn, x, y):
         super().__init__()
         self.wn = wn
-        self.t = Turtle()
         self.cannon = bullet.Bullet()
         self.x = x
         self.y = y
@@ -42,10 +41,13 @@ class Player(Turtle):
             self.y = -490
         self.goto(self.x, self.y)
     
+    def shoot():
+        self.cannon.spawn(1, self.xcor(), self.ycor(), 15)
+    
     def run(self):
         self.wn.onkey(self.turn_right, "Right")
         self.wn.onkey(self.turn_left, "Left")
         self.wn.onkey(self.drive, "Up")
         self.wn.onkey(self.reverse, "Down")
-        self.wn.onkey(self.cannon.spawn, "space")
+        self.wn.onkey(self.shoot, "space")
         self.wn.listen()
