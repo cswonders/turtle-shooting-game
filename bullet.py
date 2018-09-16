@@ -26,3 +26,4 @@ class Bullet(Turtle):
         self.stop_fill()
         self.up()
         self.update()
+        return t.xcore(), t.ycore()
