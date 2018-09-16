@@ -6,6 +6,10 @@ class Player(Turtle):
         self.wn = wn
         self.t = Turtle()
         self.cannon = bullet.Bullet()
+        self.x = x
+        self.y = y
+        self.penup()
+        self.goto(self.x, self.y)
 
     def turn_right(self):
         self.right(10)
@@ -15,9 +19,28 @@ class Player(Turtle):
         
     def drive(self):
         self.forward(10)
+        self.x = self.xcor()
+        self.y = self.ycor()
+        if self.x >= 500:
+            self.x = -490
+        if self.y >= 500:
+            self.y = -490
+        elif self.y <= -500:
+            self.y = 490
+        self.goto(self.x, self.y)
+        print(str(self.x) + ', ' + str(self.y))
     
     def reverse(self):
-        self.backward(7)   
+        self.backward(7)
+        self.x = self.xcor()
+        self.y = self.ycor()
+        if self.x <= -500:
+            self.x = 490
+        if self.y <= -500:
+            self.y = 490
+        elif self.y >= 490:
+            self.y = -490
+        self.goto(self.x, self.y)
     
     def run(self):
         self.wn.onkey(self.turn_right, "Right")
