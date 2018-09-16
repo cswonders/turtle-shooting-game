@@ -7,7 +7,7 @@ class Bullet(Turtle):
     
     def shoot(size,lposy,lposx,hop):
         self.t = Turtle()
-        self.t.tracer()
+        self.t.tracer(0,0)
         self.t.up()
         self.t.move(lposy,lposx)
         self.t.color("white")
