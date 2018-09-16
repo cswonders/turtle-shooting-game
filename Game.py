@@ -1,5 +1,6 @@
 import turtle
 import time
+import Player
 
 class Game():
     def __init__(self):
@@ -12,33 +13,37 @@ class Game():
         s.penup()
         s.goto(0, -120)
         s.write("The Amazing \n Turtle Game", align="center", font = ("Brush Script MT", 150, "bold"))
-        time.sleep(3)
+        time.sleep(1)
         for i in range(0, 101, 5):
             s.pencolor((i/100, i/100, i/100))
             s.write("The Amazing \n Turtle Game", align="center", font = ("Brush Script MT", 150, "bold"))
-        self.screen.clear()
+        s.clear()
         s.goto(0, 0)
-        t1 = Player(self.screen)
+        t1 = Player.Player(self.screen)
         time.sleep(0.25)
-        for i in range(0, 101, 2):
+        for i in range(0, 101, 4):
             s.pencolor((i/100, i/100, i/100))
             s.write("3", align="center", font = ("Brush Script MT", 150, "bold"))
-        self.screen.clear()
+        s.clear()
         time.sleep(0.25)
-        for i in range(0, 101, 2):
+        for i in range(0, 101, 4):
             s.pencolor((i/100, i/100, i/100))
             s.write("2", align="center", font = ("Brush Script MT", 150, "bold"))
-        self.screen.clear()
+        s.clear()
         time.sleep(0.25)
-        for i in range(0, 101, 2):
+        for i in range(0, 101, 4):
             s.pencolor((i/100, i/100, i/100))
             s.write("1", align="center", font = ("Brush Script MT", 150, "bold"))
-        self.screen.clear()
+        s.clear()
         time.sleep(0.25)
-        for i in range(0, 101, 2):
+        for i in range(0, 101, 4):
             s.pencolor((i/100, i/100, i/100))
             s.write("GO", align="center", font = ("Brush Script MT", 150, "bold"))
-        self.screen.clear()
+        s.clear()
+        s.hideturtle()
+        print(s.isvisible())
+        t1.run()
+        
        
 g = Game()
 g.run()
