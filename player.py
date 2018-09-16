@@ -13,6 +13,7 @@ class Player(Turtle):
         self.upk = up
         self.downk = down
         self.shootk = shoot
+        self.bl = bl
 
     def turn_right(self):
         self.right(10)
@@ -44,8 +45,8 @@ class Player(Turtle):
             self.y = -490
         self.goto(self.x, self.y)
     
-    def shoot():
-        bl.append(bullet.Bullet(self.wn, self.xcor, self.ycor, 15, self.heading()))
+    def shoot(self):
+        self.bl.append(bullet.Bullet(self.wn, self.xcor(), self.ycor(), 15, self.heading()))
     
     def run(self):
         self.wn.onkey(self.turn_right, self.rightk)
@@ -54,4 +55,3 @@ class Player(Turtle):
         self.wn.onkey(self.reverse, self.downk)
         self.wn.onkey(self.shoot, self.shootk)
         self.wn.listen()
-        #self.wn.ontimer(self.run, 5)
