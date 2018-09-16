@@ -1,13 +1,18 @@
 from turtle import Turtle, Screen
 import bullet
 class Player(Turtle):
-    def __init__(self, wn, x, y):
+    def __init__(self, wn, x, y, right, left, up, down, shoot):
         super().__init__()
         self.wn = wn
         self.x = x
         self.y = y
         self.penup()
         self.goto(self.x, self.y)
+        self.rightk = right
+        self.leftk = left
+        self.upk = up
+        self.downk = down
+        self.shootk = shoot
 
     def turn_right(self):
         self.right(10)
@@ -43,10 +48,10 @@ class Player(Turtle):
         pass
     
     def run(self):
-        self.wn.onkey(self.turn_right, "Right")
-        self.wn.onkey(self.turn_left, "Left")
-        self.wn.onkey(self.drive, "Up")
-        self.wn.onkey(self.reverse, "Down")
-        self.wn.onkey(self.shoot, "space")
+        self.wn.onkey(self.turn_right, self.rightk)
+        self.wn.onkey(self.turn_left, self.leftk)
+        self.wn.onkey(self.drive, self.upk)
+        self.wn.onkey(self.reverse, self.downk)
+        self.wn.onkey(self.shoot, self.shootk)
         self.wn.listen()
         self.wn.ontimer(self.run, 5)
