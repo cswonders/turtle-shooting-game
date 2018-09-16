@@ -1,4 +1,5 @@
 from turtle import Turtle, Screen
+import bullet
 class Player(Turtle):
     def __init__(self, wn):
         super().__init__()
@@ -17,9 +18,12 @@ class Player(Turtle):
     def reverse(self):
         self.backward(7)
 
+    self.gun = bullet.bullet    
+    
     def run(self):
         self.wn.onkey(self.turn_right, "Right")
         self.wn.onkey(self.turn_left, "Left")
         self.wn.onkey(self.drive, "Up")
         self.wn.onkey(self.reverse, "Down")
+        self.wn.onkey(self.gun.shoot, "Space")
         self.wn.listen()
