@@ -40,7 +40,7 @@ class Player(Turtle):
         self.goto(self.x, self.y)
     
     def shoot():
-        bullet.Bullet(self.wn, self.xcor(), self.ycor(), 15)
+        pass
     
     def run(self):
         self.wn.onkey(self.turn_right, "Right")
@@ -49,3 +49,4 @@ class Player(Turtle):
         self.wn.onkey(self.reverse, "Down")
         self.wn.onkey(self.shoot, "space")
         self.wn.listen()
+        self.wn.ontimer(self.run, 5)
