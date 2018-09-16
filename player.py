@@ -45,7 +45,7 @@ class Player(Turtle):
         self.goto(self.x, self.y)
     
     def shoot():
-        bl.append(bullet.Bullet(self.wn, self.xcor, self.ycor, 15))
+        bl.append(bullet.Bullet(self.wn, self.xcor, self.ycor, 15, self.heading()))
     
     def run(self):
         self.wn.onkey(self.turn_right, self.rightk)
