@@ -9,8 +9,7 @@ class Bullet(Turtle):
         self.st()
         self.speed = speed
        
-    def main()
+    def run()
         self.forward(self.speed)
         self.wn.ontimer(self.main, 5)
     
-    self.main()
