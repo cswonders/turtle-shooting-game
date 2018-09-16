@@ -5,7 +5,7 @@ class Bullet(Turtle):
         super().__init__()
     
     def spawn(size,lposy,lposx,hop):
-        self.tracer()
+        self.tracer(0, 0)
         self.up()
         self.move(lposy,lposx)
         self.color("white")
