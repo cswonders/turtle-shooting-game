@@ -10,8 +10,16 @@ class Player(Turtle):
 
     def turn_left(self):
         self.left(10)
+        
+    def drive(self):
+        self.forward(10)
+    
+    def reverse(self):
+        self.backward(7)
 
     def run(self):
         self.wn.onkey(self.turn_right, "Right")
         self.wn.onkey(self.turn_left, "Left")
+        self.wn.onkey(self.drive, "Up")
+        self.wn.onkey(self.reverse, "Down")
         self.wn.listen()
