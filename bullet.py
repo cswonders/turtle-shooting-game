@@ -1,6 +1,6 @@
 from turtle import Turtle
 import time
-class bullet(Turtle):
+class Bullet(Turtle):
     def shoot(size,lposy,lposx,hop):
         t = Turtle()
         t.tracer()
