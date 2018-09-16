@@ -7,11 +7,9 @@ class Player(Turtle):
 
     def turn_right(self):
         self.right(10)
-        print('Left')
 
     def turn_left(self):
         self.left(10)
-        print('Right')
 
     def run(self):
         self.wn.onkey(self.turn_right, "Right")
