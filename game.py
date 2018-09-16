@@ -19,7 +19,8 @@ class Game():
             s.write("The Amazing \n Turtle Game", align="center", font = ("Brush Script MT", 150, "bold"))
         s.clear()
         s.goto(0, 0)
-        t1 = player.Player(self.screen)
+        t1 = player.Player(self.screen, -250, 0)
+        t2 = player.Player(self.screen, 250, 0)
         time.sleep(0.25)
         for i in range(0, 101, 4):
             s.pencolor((i/100, i/100, i/100))
@@ -40,10 +41,12 @@ class Game():
             s.pencolor((i/100, i/100, i/100))
             s.write("GO", align="center", font = ("Brush Script MT", 150, "bold"))
         s.clear()
+        s.reset()
         s.hideturtle()
-        print(s.isvisible())
         t1.run()
+        t2.run()
         
        
 g = Game()
 g.run()
+
