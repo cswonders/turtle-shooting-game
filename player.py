@@ -27,7 +27,6 @@ class Player(Turtle):
         elif self.y <= -500:
             self.y = 490
         self.goto(self.x, self.y)
-        print(str(self.x) + ', ' + str(self.y))
     
     def reverse(self):
         self.backward(7)
