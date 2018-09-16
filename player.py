@@ -41,7 +41,7 @@ class Player(Turtle):
         self.goto(self.x, self.y)
     
     def shoot():
-        self.cannon.spawn(1, self.xcor(), self.ycor(), 15)
+        self.cannon.spawn(self.wn, self.xcor(), self.ycor(), 15)
     
     def run(self):
         self.wn.onkey(self.turn_right, "Right")
