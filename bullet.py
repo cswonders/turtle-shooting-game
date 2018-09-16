@@ -1,27 +1,26 @@
 from turtle import Turtle
 import time
 class bullet(Turtle):
-    def prep(sx,sy,speed,d,bsize):
+    def shoot(size,lposy,lposx,hop):
         t = Turtle()
-        t.tracer(0,0)
-        t.forward(0 + sx)
+        t.tracer()
+        t.up()
+        t.move(lposy,lposx)
+        t.color("white")
+        t.down()
+        t.start_fill()
+        t.circle(size)
+        t.stop_fill()
+        t.up()
+        t.forward(lposx)
         t.left(90)
-        t.forward(0 + sy)
-        t.ht()
-        if d == "left":
-            t.left(90)
-        else:
-            t.right(90)
-    def shoot():  
-        time.sleep(float(speed/10000))
-        t.color((255,255,255))
-        t.begin_fill()
-        t.circle(bsize)
-        t.end_fill()
-        t.forward(speed)
-        t.color("green")
-        t.begin_fill()
-        t.circle(bsize)
-        t.end_fill()
+        t.forward(lposy)
+        t.right(90)
+        t.forward(hop)
+        t.down()
+        t.start_fill()
+        t.color("blue")
+        t.circle(size)
+        t.stop_fill()
+        t.up()
         t.update()
-#bullet.shoot(0,0,5,"left",5)
