@@ -10,7 +10,7 @@ class Bullet(Turtle):
         self.speed = speed
         self.setheading(direction)
        
-    def run()
+    def run():
         self.forward(self.speed)
         self.wn.ontimer(self.main, 5)
     
