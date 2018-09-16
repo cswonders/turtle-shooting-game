@@ -25,5 +25,5 @@ class Player(Turtle):
         self.wn.onkey(self.turn_left, "Left")
         self.wn.onkey(self.drive, "Up")
         self.wn.onkey(self.reverse, "Down")
-        self.wn.onkey(self.gun.shoot, "Space")
+        self.wn.onkey(self.gun.shoot, "space")
         self.wn.listen()
