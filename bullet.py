@@ -12,5 +12,3 @@ class Bullet(Turtle):
        
     def run():
         self.forward(self.speed)
-        self.wn.ontimer(self.main, 5)
-    
