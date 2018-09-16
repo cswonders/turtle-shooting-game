@@ -1,7 +1,7 @@
 from turtle import Turtle, Screen
 import bullet
 class Player(Turtle):
-    def __init__(self, wn):
+    def __init__(self, wn, x, y):
         super().__init__()
         self.wn = wn
         self.t = Turtle()
